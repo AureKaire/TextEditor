@@ -6,6 +6,10 @@ java -cp hibernate.cfg.xml org.h2.tools.Server
 
 JDBC URL change to: jdbc:h2:tcp://localhost/~/Code/screencasts/TextEditor/data/giflib
 
+To open project:
+insert Grande
+url path: http://localhost:8080/categories
+
 What this app does:
 
 
