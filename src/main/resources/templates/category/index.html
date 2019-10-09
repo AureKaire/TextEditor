@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="layout :: head('text')"></head>
+<body>
+    <div th:replace="layout :: nav"></div>
+    <div th:replace="layout :: flash"></div>
+    <div class="categories container">
+        <div class="row">
+            <div class="col s9">
+                <h2>Add Text</h2>
+            </div>
+            <div class="col s3">
+                <a class="right add" href="/categories/add">+</a>
+            </div>
+        </div>
+            <div th:each="cat : ${categories}" class="col s12 l4">
+                <div class="divider"></div>
+                <h>Text:</h>
+                <a th:href="@{|/${cat.id}|}" th:text="${cat.inputText}"></a>
+                <h>Result:</h>
+                <a  th:href="@{|/${cat.id}|}" th:text="${cat.changedText}"></a>
+                <h>Manipulation:</h>
+                <a class="edit" th:href="@{|/categories/${cat.id}/edit|}"><i class="hide-on-med-and-down material-icons">more_horiz</i><i class="hide-on-large-only medium material-icons">more_horiz</i></a>
+            </div>
+        </div>
+    </div>
+    <div th:replace="layout :: scripts"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head th:replace="layout :: head('new text')"></head>
+<body>
+<div th:replace="layout :: nav"></div>
+<div th:replace="layout :: flash"></div>
+<div class="container">
+    <form th:action="@{${action}}" method="post" th:object="${category}">
+        <input type="hidden" th:field="*{id}"/>
+        <div class="row">
+            <div class="col s12">
+                <h2 th:text="${heading}">New Category</h2>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col s12 l8" th:classappend="${#fields.hasErrors('inputText')}? 'error' : ''">
+                <input type="text" th:field="*{inputText}" placeholder="Write text"/>
+                <div class="error-message" th:if="${#fields.hasErrors('inputText')}" th:errors="*{inputText}"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l8">
+                <button th:text="${submit}" type="submit" class="button">Add</button>
+                <a th:href="@{/categories}" class="button">Cancel</a>
+            </div>
+        </div>
+    </form>
+    <div class="row delete" th:id="${category.id != null}">
+        <div class="col s12 l8">
+            <form th:action="@{|/categories/${category.id}/delete|}" method="post">
+                <button type="submit" class="button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>
