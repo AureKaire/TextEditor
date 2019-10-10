@@ -44,7 +44,7 @@ public class CategoryDaoImpl implements CategoryDao {
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        Hibernate.initialize(category.getChangedText());
+        
         session.saveOrUpdate(category);
         session.getTransaction().commit();
         session.close();
