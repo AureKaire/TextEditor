@@ -8,6 +8,7 @@ JDBC URL change to: jdbc:h2:tcp://localhost/~/Code/screencasts/texteditor/data/g
 
 To open project:
 insert Grande
+
 url path: http://localhost:8080/categories
 
 What this app does:
