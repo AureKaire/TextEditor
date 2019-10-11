@@ -22,7 +22,6 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.1.9.RELEASE'
     compile 'org.hashids:hashids:1.0.3'
-    compile 'org.springframework:spring-orm:5.2.0.RELEASE'
     compile 'org.hibernate:hibernate-core:5.4.6.Final'
     compile 'org.apache.tomcat:tomcat-dbcp:9.0.24'
     compile 'com.h2database:h2:1.4.198'
