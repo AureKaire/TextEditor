@@ -2,9 +2,9 @@
 Java Spring MVC hibernate text editor
 
 To open database:
-java -cp hibernate.cfg.xml org.h2.tools.Server
+java -cp h2-1.4.198.jar org.h2.tools.Server
 
-JDBC URL change to: jdbc:h2:tcp://localhost/~/Code/screencasts/texteditor/data/giflib
+JDBC URL change to: jdbc:h2:tcp://localhost/~/Code/screencasts/TextEditor/data/giflib
 
 To open project:
 insert Grande
