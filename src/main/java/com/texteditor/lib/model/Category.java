@@ -52,7 +52,7 @@ public class Category {
         for (String word : words) {
             String lastChar = String.valueOf(word.charAt(word.length()-1));
             if (map.get(lastChar) == null) {
-                map.put(lastChar, new ArrayList(Arrays.asList(word)));
+                map.put(lastChar, new ArrayList<>(Arrays.asList(word)));
             } else {
                 map.get(lastChar).add(word);
             }
