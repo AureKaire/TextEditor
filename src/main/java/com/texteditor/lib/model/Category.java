@@ -40,8 +40,8 @@ public class Category {
         return changeText(this.inputText);
     }
 
-    public void setChangedText(String name) {
-        this.changedText = changeText(name);
+   public void setChangedText(String changedText) {
+        this.changedText = changedText;
     }
 
     private String changeText(String name) {
