@@ -20,8 +20,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    // Index of all categories
-    @SuppressWarnings("unchecked")
+  
     @RequestMapping("/categories")
     public String listCategories(Model model) {
         List<Category> categories = categoryService.findAll();
