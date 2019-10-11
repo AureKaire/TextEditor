@@ -48,24 +48,23 @@ public class Category {
         String[] arr= name.trim().split("\\s+");
         List<String> words = new ArrayList<>(Arrays.asList(arr));
 
-        Map<String, List<String>> map = new HashMap();
+        Map<String, List<String>> map = new HashMap<>();
         for (String word : words) {
             String lastChar = String.valueOf(word.charAt(word.length()-1));
             if (map.get(lastChar) == null) {
-                map.put(lastChar, new ArrayList<>(Arrays.asList(word)));
+                  map.put(lastChar, new ArrayList<>(Collections.singletonList(word)));
             } else {
                 map.get(lastChar).add(word);
             }
         }
 
         StringBuilder mapAsString = new StringBuilder(" ");
-        for (String key : map.keySet()) {
-            mapAsString.append(key + " "+map.get(key).size() + map.get(key) + " " + "\n");
+         for (String key : map.keySet()) {
+            mapAsString.append(key).append(" ").append(map.get(key).size()).append(map.get(key)).append(" ").append("\n");
         }
         mapAsString.delete(mapAsString.length()-2, mapAsString.length()).append(" ");
-        String result=  mapAsString.toString();
 
-        return result;
+        return mapAsString.toString();
     }
 
 }
