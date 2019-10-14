@@ -21,4 +21,5 @@ $(function(){
 
         $(obj.selPlaceholder).attr('style',style);
     };
+    });
 
