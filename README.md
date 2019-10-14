@@ -17,7 +17,6 @@ What this app does:
 - Includes database connectivity
 - Allows a user to perform CRUD (create, read, update, delete) operations on category data
 - Uses a database
-- Serves static assets, such  fonts, CSS, and JS
 - Edits text and stores the result 
 
 ** Need to fix testing.
